@@ -1,0 +1,17 @@
+<div class="container">
+    <h2 class="all"><strong>Create Comment</strong></h2>
+      <div class="form-group">
+          <%= form_for @comment, url:  user_projectt_bug_comments_path, local: true do |f| %>
+              <p>
+                <strong><%= f.label 'Comment:' %></strong>
+                <%= f.text_field :text, class: "form-control"%>
+              </p>
+
+              <p>
+                <%= f.submit class: "btn btn-primary" %>
+              </p>
+             <%= link_to "show comment", user_projectt_bug_comments_path(current_user),class: "btn btn-outline-primary"%>
+          <%end%>
+    </div>
+</div>
+
